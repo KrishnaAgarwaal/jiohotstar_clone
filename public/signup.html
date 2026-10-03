@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Sign Up | JioHotstar - Create Your Account</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/jiohotstar.css" />
+</head>
+<body class="default">
+
+  <div class="jhs-auth-page">
+    <!-- Top Header -->
+    <header class="jhs-auth-header">
+      <a href="/" class="jhs-brand-mark" style="gap: 12px;">
+        <div class="jhs-brand-icon">
+          <svg viewBox="0 0 900 666" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M501.408 221.7L800.132 6.98259C806.493 2.4106 814.032 10.8873 808.75 16.6714L553.496 296.161C550.013 299.975 550.81 306.008 555.165 308.786L711.99 412.664C717.904 416.581 714.191 425.79 707.215 424.51L503.884 387.223C500.637 386.627 497.425 388.424 496.233 391.502L393.603 656.51C390.902 663.533 380.455 661.436 380.674 653.914L387.855 407.305C387.99 402.677 383.605 399.242 379.144 400.481L209.721 447.532C202.699 449.483 198.256 440.193 204.182 435.951L334.919 342.368C339.228 339.284 338.575 332.691 333.745 330.512L93.2881 222.037C86.2847 218.877 89.5596 208.32 97.1216 209.679L343.631 253.979C348.917 254.929 352.797 249.122 349.896 244.602L294.127 152.304C290.572 146.763 296.914 140.21 302.568 143.582L405.461 210.882C409.332 213.414 414.549 211.477 415.829 207.032L463.117 42.8773C465.27 35.3707 476.232 36.4706 476.85 44.2552L490.543 216.662C490.967 222 497.061 224.825 501.408 221.7Z" fill="white"/>
+          </svg>
+        </div>
+        <span style="font-size: 21px; font-weight: 700; letter-spacing: -0.4px; background: linear-gradient(90deg, #fff, #ccebff, #ff8fbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          JioHotstar
+        </span>
+      </a>
+
+      <a href="/" class="btn-jhs-secondary" style="padding: 8px 18px; font-size: 13px; text-decoration: none;">
+        <i class="soul-icon icon-arrow-back"></i> Back to Home
+      </a>
+    </header>
+
+    <!-- Center Onboarding Sign Up Card -->
+    <div class="jhs-auth-card-wrap">
+      <div class="jhs-auth-card">
+        <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #ffcc4d; background: rgba(255, 204, 77, 0.12); border: 1px solid rgba(255, 204, 77, 0.3); padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;">
+          <span>★</span> <span>JioHotstar Onboarding</span>
+        </div>
+
+        <h1 class="jhs-auth-title">Create your account</h1>
+        <p class="jhs-auth-subtitle">
+          Sign up to stream live cricket, blockbuster movies &amp; Hotstar Specials. Your password is encrypted with <code>bcryptjs</code> and saved in Firebase Firestore.
+        </p>
+
+        <div id="signupAlert" class="jhs-alert"></div>
+
+        <form id="signupForm" onsubmit="handleSignup(event)">
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              class="jhs-input"
+              placeholder="e.g. Krishna Sharma"
+              required
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="jhs-input"
+              placeholder="name@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="phone">Mobile Number (+91)</label>
+            <input
+              type="tel"
+              id="phone"
+              class="jhs-input"
+              placeholder="+91 98765 43210"
+              value="+91 "
+            />
+          </div>
+
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="plan">Choose Your Plan</label>
+            <select id="plan" class="jhs-input">
+              <option value="JioHotstar Premium 4K (₹1499/yr)">JioHotstar Premium 4K • 4 Devices (₹1499/yr)</option>
+              <option value="JioHotstar Super (₹899/yr)">JioHotstar Super • 2 Devices Full HD (₹899/yr)</option>
+              <option value="JioHotstar Mobile (₹499/yr)">JioHotstar Mobile • 1 Device (₹499/yr)</option>
+            </select>
+          </div>
+
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="password">Password (Min. 6 Characters)</label>
+            <input
+              type="password"
+              id="password"
+              class="jhs-input"
+              placeholder="Create a strong password"
+              minlength="6"
+              required
+              autocomplete="new-password"
+            />
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-jhs-primary" style="width: 100%; margin-top: 8px; padding: 14px;">
+            <span>Continue &amp; Create Account</span>
+            <i class="soul-icon icon-caret-forward"></i>
+          </button>
+        </form>
+
+        <div style="margin-top: 22px; text-align: center; font-size: 14px; color: #8f98b2;">
+          Already have an account?
+          <a href="/login.html" style="color: #1492ff; font-weight: 600; text-decoration: none; margin-left: 4px;">
+            Log In here
+          </a>
+        </div>
+
+        <p style="margin-top: 16px; text-align: center; font-size: 11px; color: #6c748c; line-height: 1.5;">
+          By proceeding, you agree to JioHotstar's Terms of Use and Privacy Policy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 18px; font-size: 12px; color: #6c748c;">
+      © 2026 STAR India / JioHotstar Clone • Node.js + Express + Firebase Firestore + bcryptjs
+    </footer>
+  </div>
+
+  <script>
+    async function handleSignup(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('signupAlert');
+      const submitBtn = document.getElementById('submitBtn');
+
+      alertBox.className = 'jhs-alert';
+      alertBox.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Encrypting & Saving to Firestore...</span>';
+
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        plan: document.getElementById('plan').value,
+        password: document.getElementById('password').value
+      };
+
+      try {
+        const res = await fetch('/api/auth/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          alertBox.textContent = data.error || 'Could not create account.';
+          alertBox.className = 'jhs-alert error';
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Continue & Create Account</span><i class="soul-icon icon-caret-forward"></i>';
+          return;
+        }
+
+        // Save JWT token for authenticated API calls
+        localStorage.setItem('jhs_token', data.token);
+
+        alertBox.textContent = 'Account created & password hashed in Firestore! Redirecting to JioHotstar...';
+        alertBox.className = 'jhs-alert success';
+
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 900);
+      } catch (err) {
+        alertBox.textContent = 'Network error. Please make sure the server is running.';
+        alertBox.className = 'jhs-alert error';
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<span>Continue & Create Account</span><i class="soul-icon icon-caret-forward"></i>';
+      }
+    }
+  </script>
+</body>
+</html>

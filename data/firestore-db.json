@@ -1,0 +1,42 @@
+{
+  "users": {
+    "krishna@jiohotstar.com": {
+      "name": "Krishna",
+      "email": "krishna@jiohotstar.com",
+      "phone": "+91 9876543210",
+      "plan": "JioHotstar Premium 4K (₹1499/yr)",
+      "passwordHash": "$2a$10$XP19uET4QVEiHVB7IsuiYOS3t.dgjAWzyj0Jloh.8/SYvE30FXtb.",
+      "watchlist": [
+        "hs-1",
+        "hs-2",
+        "hs-3"
+      ],
+      "createdAt": "2026-10-03T12:02:09.156Z"
+    },
+    "agarwalkrishna2073@gmail.com": {
+      "name": "Krishna Agarwaal",
+      "email": "agarwalkrishna2073@gmail.com",
+      "phone": "+919719439555",
+      "plan": "JioHotstar Premium 4K (₹1499/yr)",
+      "passwordHash": "$2a$10$AyAYx96/xmWk27YXG.mNZ.nse1Ah/AQaJ7QTaCtudqLBc7NgUbSpa",
+      "watchlist": [
+        "hs-2",
+        "hs-3"
+      ],
+      "watchHistory": [],
+      "createdAt": "2026-10-03T11:56:44.164Z"
+    }
+  },
+  "reviews": {
+    "doc_1791027543335_dpzuna": {
+      "id": "doc_1791027543335_dpzuna",
+      "movieId": "hs-2",
+      "movieTitle": "Deadpool & Wolverine",
+      "userEmail": "krishna@jiohotstar.com",
+      "userName": "Krishna",
+      "rating": 5,
+      "comment": "Incredible 4K Dolby Vision stream on JioHotstar!",
+      "createdAt": "2026-10-03T11:39:03.335Z"
+    }
+  }
+}

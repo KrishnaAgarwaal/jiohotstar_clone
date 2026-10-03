@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>JioHotstar - Watch TV Shows, Movies, Specials, Live Cricket &amp; Football</title>
+  <meta name="description" content="JioHotstar is India’s largest premium streaming platform with more than 100,000 hours of drama and movies in 17 languages, and coverage of every major global sporting event" />
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/jiohotstar.css" />
+</head>
+<body class="default">
+
+  <!-- ========================================================================
+       LEFT SIDEBAR NAVIGATION (Official JioHotstar Expand-on-Hover Rail)
+       ======================================================================== -->
+  <aside class="jhs-sidebar">
+    <div class="jhs-logo-area">
+      <a href="/" class="jhs-brand-mark" title="JioHotstar Home">
+        <div class="jhs-brand-icon">
+          <!-- Official Extracted JioHotstar Spark Star Emblem SVG -->
+          <svg viewBox="0 0 900 666" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M501.408 221.7L800.132 6.98259C806.493 2.4106 814.032 10.8873 808.75 16.6714L553.496 296.161C550.013 299.975 550.81 306.008 555.165 308.786L711.99 412.664C717.904 416.581 714.191 425.79 707.215 424.51L503.884 387.223C500.637 386.627 497.425 388.424 496.233 391.502L393.603 656.51C390.902 663.533 380.455 661.436 380.674 653.914L387.855 407.305C387.99 402.677 383.605 399.242 379.144 400.481L209.721 447.532C202.699 449.483 198.256 440.193 204.182 435.951L334.919 342.368C339.228 339.284 338.575 332.691 333.745 330.512L93.2881 222.037C86.2847 218.877 89.5596 208.32 97.1216 209.679L343.631 253.979C348.917 254.929 352.797 249.122 349.896 244.602L294.127 152.304C290.572 146.763 296.914 140.21 302.568 143.582L405.461 210.882C409.332 213.414 414.549 211.477 415.829 207.032L463.117 42.8773C465.27 35.3707 476.232 36.4706 476.85 44.2552L490.543 216.662C490.967 222 497.061 224.825 501.408 221.7Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="jhs-brand-text">JioHotstar</span>
+      </a>
+      <a href="/signup.html" class="jhs-upgrade-pill" id="sidebarPlanBadge">
+        <span>★</span> <span>Upgrade</span>
+      </a>
+    </div>
+
+    <nav class="jhs-nav-links">
+      <button class="jhs-nav-item" onclick="switchView('myspace')" id="nav-myspace">
+        <i class="soul-icon icon-user-line"></i>
+        <span class="jhs-nav-label">My Space</span>
+      </button>
+      <button class="jhs-nav-item" onclick="toggleSearchBar()" id="nav-search">
+        <i class="soul-icon icon-hs-search-line"></i>
+        <span class="jhs-nav-label">Search</span>
+      </button>
+      <button class="jhs-nav-item active" onclick="filterCategory('All', 'nav-home')" id="nav-home">
+        <i class="soul-icon icon-hs-home-fill"></i>
+        <span class="jhs-nav-label">Home</span>
+      </button>
+      <button class="jhs-nav-item" onclick="filterCategory('Shows', 'nav-shows')" id="nav-shows">
+        <i class="soul-icon icon-hs-tv-line"></i>
+        <span class="jhs-nav-label">TV</span>
+      </button>
+      <button class="jhs-nav-item" onclick="filterCategory('Movies', 'nav-movies')" id="nav-movies">
+        <i class="soul-icon icon-hs-movies-line"></i>
+        <span class="jhs-nav-label">Movies</span>
+      </button>
+      <button class="jhs-nav-item" onclick="filterCategory('Sports', 'nav-sports')" id="nav-sports">
+        <i class="soul-icon icon-hs-sports-line"></i>
+        <span class="jhs-nav-label">Sports</span>
+      </button>
+      <button class="jhs-nav-item" onclick="filterCategory('Specials', 'nav-specials')" id="nav-specials">
+        <i class="soul-icon icon-category-line"></i>
+        <span class="jhs-nav-label">Specials</span>
+      </button>
+    </nav>
+
+    <div style="padding-left: 24px; width: 100%;">
+      <a href="/login.html" id="sidebarAuthLink" class="jhs-nav-item">
+        <i class="soul-icon icon-arrow-forward"></i>
+        <span class="jhs-nav-label">Log In</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       TOP RIGHT USER PILL / AUTH STATUS BAR
+       ======================================================================== -->
+  <header class="jhs-topbar">
+    <div id="topAuthArea" style="display: flex; align-items: center; gap: 10px;">
+      <a href="/login.html" class="jhs-user-pill">
+        <div class="jhs-avatar"><i class="soul-icon icon-user-fill" style="font-size:13px;"></i></div>
+        <span>Log In</span>
+      </a>
+      <a href="/signup.html" class="btn-jhs-primary" style="padding: 8px 18px; font-size: 13px; border-radius: 999px;">
+        Sign Up
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT CONTAINER
+       ======================================================================== -->
+  <main class="jhs-main">
+
+    <!-- SEARCH BAR DRAWER (Hidden by default) -->
+    <section id="searchSection" style="display: none; padding: 84px 48px 10px 36px;">
+      <div style="position: relative; max-width: 680px;">
+        <i class="soul-icon icon-hs-search-line" style="position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: #8f98b2; font-size: 20px;"></i>
+        <input
+          type="text"
+          id="searchInput"
+          class="jhs-input"
+          placeholder="Movies, shows, specials and live sports..."
+          style="padding-left: 52px; font-size: 17px; background: #16181f; border-radius: 14px;"
+          oninput="handleSearch(this.value)"
+        />
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         HOME VIEW (Hero Banner + Horizontal Content Trays + Community Reviews)
+         ====================================================================== -->
+    <div id="homeView">
+      <!-- HERO BANNER -->
+      <section class="jhs-hero" id="heroSection">
+        <img id="heroBackdrop" class="jhs-hero-bg" src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&w=1800&q=85" alt="Featured Title" />
+        <video id="heroVideo" class="jhs-hero-video" muted loop playsinline></video>
+        <div class="jhs-hero-overlay"></div>
+
+        <div class="jhs-hero-content">
+          <div class="jhs-hero-badge-row">
+            <span id="heroBadge" class="jhs-badge-special">4K Dolby Vision</span>
+            <span style="font-size: 12px; color: #ffcc4d; font-weight: 600;">JioHotstar Exclusive</span>
+          </div>
+          <h1 id="heroTitle" class="jhs-hero-title">Deadpool &amp; Wolverine</h1>
+          <div class="jhs-hero-meta">
+            <span id="heroYear">2024</span>
+            <span>•</span>
+            <span id="heroDuration">2h 8m</span>
+            <span>•</span>
+            <span id="heroLanguage">4 Languages</span>
+            <span>•</span>
+            <span id="heroRating" class="jhs-meta-tag">U/A 16+</span>
+          </div>
+          <p id="heroDesc" class="jhs-hero-desc">
+            Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse alongside Wolverine.
+          </p>
+          <div class="jhs-hero-actions">
+            <button class="btn-jhs-primary" onclick="openPlayerModal(currentHeroMovie.id)">
+              <i class="soul-icon icon-play-fill"></i>
+              <span>Watch Now</span>
+            </button>
+            <button id="heroWatchlistBtn" class="btn-jhs-secondary" onclick="toggleWatchlist(currentHeroMovie.id)" title="Add to My Watchlist">
+              <i class="soul-icon icon-add" id="heroWatchlistIcon"></i>
+              <span id="heroWatchlistText">Watchlist</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Slide Switcher Thumbnails -->
+        <div class="jhs-hero-thumbs" id="heroThumbs"></div>
+      </section>
+
+      <!-- MY WATCHLIST TRAY (Dynamically synced with Firebase Firestore!) -->
+      <section class="jhs-tray" id="watchlistTray" style="display: none;">
+        <div class="jhs-tray-header">
+          <h2 class="jhs-tray-title">
+            My Watchlist <span id="watchlistCountBadge" style="font-size: 13px; color: #1492ff; font-weight: 600; margin-left: 8px;"></span>
+          </h2>
+          <button onclick="switchView('myspace')" style="background: none; border: none; color: #8f98b2; font-size: 13px; font-weight: 600; cursor: pointer;">
+            Manage in My Space <i class="soul-icon icon-caret-forward"></i>
+          </button>
+        </div>
+        <div class="jhs-tray-row" id="watchlistRow"></div>
+      </section>
+
+      <!-- LATEST RELEASES TRAY -->
+      <section class="jhs-tray">
+        <div class="jhs-tray-header">
+          <h2 class="jhs-tray-title" id="mainCatalogHeading">Latest Releases</h2>
+        </div>
+        <div class="jhs-tray-row" id="latestReleasesRow"></div>
+      </section>
+
+      <!-- LIVE SPORTS & CRICKET TRAY -->
+      <section class="jhs-tray" id="sportsTraySection">
+        <div class="jhs-tray-header">
+          <h2 class="jhs-tray-title">Live Cricket, Premier League &amp; Sports</h2>
+        </div>
+        <div class="jhs-tray-row" id="liveSportsRow"></div>
+      </section>
+
+      <!-- TOP 10 IN INDIA TODAY TRAY -->
+      <section class="jhs-tray" id="top10TraySection">
+        <div class="jhs-tray-header">
+          <h2 class="jhs-tray-title">Top 10 in India Today — Hindi &amp; Regional</h2>
+        </div>
+        <div class="jhs-tray-row" id="top10Row"></div>
+      </section>
+
+      <!-- HOTSTAR SPECIALS TRAY -->
+      <section class="jhs-tray" id="specialsTraySection">
+        <div class="jhs-tray-header">
+          <h2 class="jhs-tray-title">Hotstar Specials &amp; Originals</h2>
+        </div>
+        <div class="jhs-tray-row" id="specialsRow"></div>
+      </section>
+
+      <!-- ====================================================================
+           EXTRA CRUD FEATURE SECTION: Community Reviews & Ratings (Firestore)
+           ==================================================================== -->
+      <section class="jhs-tray" style="margin-top: 24px;">
+        <div style="background: linear-gradient(135deg, rgba(22, 24, 31, 0.95), rgba(25, 28, 38, 0.9)); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 28px;">
+          <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 22px;">
+            <div>
+              <span class="jhs-badge-special" style="margin-bottom: 8px; display: inline-block;">Firestore CRUD Feature</span>
+              <h2 class="jhs-tray-title" style="font-size: 22px;">JioHotstar Fan Reviews &amp; Ratings</h2>
+              <p style="font-size: 13px; color: #8f98b2; margin-top: 4px;">
+                Post a review or save shows to your Watchlist — persisted directly in the backend Firestore database.
+              </p>
+            </div>
+          </div>
+
+          <!-- Add Review Form -->
+          <form id="reviewForm" onsubmit="submitReview(event)" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 24px; background: rgba(15, 16, 20, 0.65); padding: 18px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.08);">
+            <div>
+              <label class="jhs-label">Select Title</label>
+              <select id="reviewMovieSelect" class="jhs-input" required></select>
+            </div>
+            <div>
+              <label class="jhs-label">Rating</label>
+              <select id="reviewRating" class="jhs-input" required>
+                <option value="5">★★★★★ (5/5 Masterpiece)</option>
+                <option value="4">★★★★☆ (4/5 Great Watch)</option>
+                <option value="3">★★★☆☆ (3/5 Good)</option>
+                <option value="2">★★☆☆☆ (2/5 Average)</option>
+              </select>
+            </div>
+            <div style="grid-column: span 2;">
+              <label class="jhs-label">Your Review</label>
+              <div style="display: flex; gap: 10px;">
+                <input type="text" id="reviewComment" class="jhs-input" placeholder="Share what you loved about this movie or match..." required />
+                <button type="submit" class="btn-jhs-primary" style="padding: 0 24px; white-space: nowrap;">Post Review</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Reviews List -->
+          <div id="reviewsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px;"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ======================================================================
+         MY SPACE VIEW (User Dashboard, Profile Update & Saved Watchlist CRUD)
+         ====================================================================== -->
+    <div id="mySpaceView" style="display: none; padding: 72px 48px 40px 36px; background-image: var(--jhs-ambient-glow); min-height: 90vh;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(255, 255, 255, 0.12);">
+          <div style="display: flex; align-items: center; gap: 20px;">
+            <div id="mySpaceAvatar" style="width: 72px; height: 72px; border-radius: 50%; background: var(--jhs-gradient); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 700; box-shadow: 0 8px 24px rgba(235, 0, 102, 0.4);">
+              U
+            </div>
+            <div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <h1 id="mySpaceName" style="font-size: 28px; font-weight: 700;">Guest Viewer</h1>
+                <span id="mySpacePlan" class="jhs-upgrade-pill">JioHotstar Super</span>
+              </div>
+              <p id="mySpaceEmail" style="color: #8f98b2; font-size: 14px; margin-top: 4px;">Log in to sync your Watchlist &amp; Profile with Firestore</p>
+            </div>
+          </div>
+
+          <div id="mySpaceAuthButtons" style="display: flex; gap: 12px;">
+            <a href="/login.html" class="btn-jhs-primary">Log In</a>
+            <a href="/signup.html" class="btn-jhs-secondary">Create Account</a>
+          </div>
+
+          <div id="mySpaceLoggedInActions" style="display: none; gap: 12px;">
+            <button class="btn-jhs-secondary" onclick="switchView('home')">
+              <i class="soul-icon icon-arrow-back"></i> Back to Home
+            </button>
+            <button class="btn-jhs-secondary" style="border-color: rgba(255, 99, 92, 0.4); color: #ff8080;" onclick="logoutUser()">
+              Log Out
+            </button>
+          </div>
+        </div>
+
+        <!-- Profile Edit & Saved Watchlist Grid -->
+        <div id="mySpaceDashboardContent" style="display: grid; grid-template-columns: 340px 1fr; gap: 28px; margin-top: 32px;">
+          <!-- Update Profile Card (Firestore UPDATE) -->
+          <div style="background: rgba(22, 24, 31, 0.9); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 24px; height: fit-content;">
+            <h3 style="font-size: 17px; font-weight: 700; margin-bottom: 16px;">Account Settings (Firestore)</h3>
+            <form onsubmit="updateProfile(event)">
+              <div class="jhs-form-group">
+                <label class="jhs-label">Display Name</label>
+                <input type="text" id="editProfileName" class="jhs-input" placeholder="Your Name" required />
+              </div>
+              <div class="jhs-form-group">
+                <label class="jhs-label">Mobile Number</label>
+                <input type="text" id="editProfilePhone" class="jhs-input" placeholder="+91 9876543210" />
+              </div>
+              <div class="jhs-form-group">
+                <label class="jhs-label">Subscription Tier</label>
+                <select id="editProfilePlan" class="jhs-input">
+                  <option value="JioHotstar Premium 4K (₹1499/yr)">JioHotstar Premium 4K (₹1499/yr)</option>
+                  <option value="JioHotstar Super (₹899/yr)">JioHotstar Super (₹899/yr)</option>
+                  <option value="JioHotstar Mobile (₹499/yr)">JioHotstar Mobile (₹499/yr)</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-jhs-primary" style="width: 100%; padding: 12px;">Save Changes</button>
+            </form>
+          </div>
+
+          <!-- Saved Watchlist Items in My Space -->
+          <div>
+            <h3 style="font-size: 19px; font-weight: 700; margin-bottom: 16px;">My Saved Watchlist</h3>
+            <div id="mySpaceWatchlistGrid" class="jhs-tray-row"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========================================================================
+       VIDEO PLAYER MODAL
+       ======================================================================== -->
+  <div class="jhs-modal-backdrop" id="playerModal">
+    <div class="jhs-modal">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <div>
+          <span id="modalBadge" class="jhs-badge-special" style="margin-right: 8px;">Streaming in 4K</span>
+          <strong id="modalTitle" style="font-size: 18px;">Title</strong>
+        </div>
+        <button onclick="closePlayerModal()" style="background: rgba(255,255,255,0.1); border: none; color: #fff; width: 34px; height: 34px; border-radius: 50%; cursor: pointer;">
+          <i class="soul-icon icon-close"></i>
+        </button>
+      </div>
+      <div style="background: #000; aspect-ratio: 16 / 9; width: 100%;">
+        <video id="modalVideoPlayer" controls style="width: 100%; height: 100%; object-fit: cover;" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"></video>
+      </div>
+      <div style="padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+        <p id="modalDescription" style="font-size: 13px; color: #b0b8d1; flex: 1;"></p>
+        <button id="modalWatchlistBtn" class="btn-jhs-secondary" style="padding: 10px 18px; font-size: 14px;">
+          + Watchlist
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="jhs-toast"></div>
+
+  <!-- ========================================================================
+       FRONTEND APPLICATION SCRIPT (Connected to Node/Express + Firestore APIs)
+       ======================================================================== -->
+  <script>
+    let catalog = [];
+    let heroSlides = [];
+    let currentHeroMovie = null;
+    let currentUser = null;
+    let userWatchlistIds = [];
+
+    const getAuthToken = () => localStorage.getItem('jhs_token');
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3200);
+    }
+
+    // 1. Initialize App: Fetch Auth State, Catalog, Watchlist, and Reviews
+    async function initApp() {
+      await checkUserSession();
+      await loadCatalog();
+      await loadReviews();
+    }
+
+    async function checkUserSession() {
+      const token = getAuthToken();
+      if (!token) {
+        renderAuthUI(null);
+        return;
+      }
+      try {
+        const res = await fetch('/api/auth/me', {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        if (!res.ok) {
+          localStorage.removeItem('jhs_token');
+          renderAuthUI(null);
+          return;
+        }
+        const data = await res.json();
+        currentUser = data.user;
+        userWatchlistIds = currentUser.watchlist || [];
+        renderAuthUI(currentUser);
+      } catch (err) {
+        renderAuthUI(null);
+      }
+    }
+
+    function renderAuthUI(user) {
+      const topAuthArea = document.getElementById('topAuthArea');
+      const sidebarAuthLink = document.getElementById('sidebarAuthLink');
+      const sidebarPlanBadge = document.getElementById('sidebarPlanBadge');
+
+      if (user) {
+        const initial = user.name ? user.name.charAt(0).toUpperCase() : 'U';
+        topAuthArea.innerHTML = `
+          <div class="jhs-user-pill" onclick="switchView('myspace')" title="Open My Space">
+            <div class="jhs-avatar">${initial}</div>
+            <span>${user.name}</span>
+          </div>
+          <button onclick="logoutUser()" class="btn-jhs-secondary" style="padding: 7px 14px; font-size: 12px; border-radius: 999px;">
+            Log Out
+          </button>
+        `;
+        sidebarAuthLink.href = "javascript:void(0)";
+        sidebarAuthLink.onclick = () => logoutUser();
+        sidebarAuthLink.innerHTML = `<i class="soul-icon icon-close"></i><span class="jhs-nav-label">Log Out</span>`;
+        sidebarPlanBadge.innerHTML = `<span>★</span> <span>${(user.plan || 'Super').split(' ')[1] || 'Pro'}</span>`;
+        sidebarPlanBadge.href = "javascript:switchView('myspace')";
+
+        // Populate My Space
+        document.getElementById('mySpaceAvatar').textContent = initial;
+        document.getElementById('mySpaceName').textContent = user.name;
+        document.getElementById('mySpaceEmail').textContent = `${user.email} • ${user.phone || ''}`;
+        document.getElementById('mySpacePlan').textContent = user.plan || 'JioHotstar Premium 4K';
+        document.getElementById('mySpaceAuthButtons').style.display = 'none';
+        document.getElementById('mySpaceLoggedInActions').style.display = 'flex';
+        document.getElementById('editProfileName').value = user.name || '';
+        document.getElementById('editProfilePhone').value = user.phone || '';
+        if (user.plan) document.getElementById('editProfilePlan').value = user.plan;
+      } else {
+        topAuthArea.innerHTML = `
+          <a href="/login.html" class="jhs-user-pill">
+            <div class="jhs-avatar"><i class="soul-icon icon-user-fill" style="font-size:13px;"></i></div>
+            <span>Log In</span>
+          </a>
+          <a href="/signup.html" class="btn-jhs-primary" style="padding: 8px 18px; font-size: 13px; border-radius: 999px;">
+            Sign Up
+          </a>
+        `;
+        document.getElementById('mySpaceAuthButtons').style.display = 'flex';
+        document.getElementById('mySpaceLoggedInActions').style.display = 'none';
+      }
+    }
+
+    function logoutUser() {
+      localStorage.removeItem('jhs_token');
+      currentUser = null;
+      userWatchlistIds = [];
+      showToast('Logged out successfully');
+      setTimeout(() => window.location.reload(), 500);
+    }
+
+    // 2. Load Catalog & Render Trays
+    async function loadCatalog(category = 'All', search = '') {
+      const params = new URLSearchParams();
+      if (category && category !== 'All') params.set('category', category);
+      if (search) params.set('search', search);
+
+      const res = await fetch(`/api/catalog?${params.toString()}`);
+      const data = await res.json();
+      catalog = data.catalog || [];
+
+      // Populate Review Dropdown
+      const select = document.getElementById('reviewMovieSelect');
+      if (select && select.options.length === 0) {
+        catalog.forEach((m) => {
+          const opt = document.createElement('option');
+          opt.value = m.id;
+          opt.textContent = m.title;
+          select.appendChild(opt);
+        });
+      }
+
+      if (category === 'All' && !search) {
+        heroSlides = catalog.slice(0, 4);
+        if (heroSlides.length > 0) {
+          setHeroBanner(heroSlides[0]);
+          renderHeroThumbs();
+        }
+        document.getElementById('mainCatalogHeading').textContent = 'Latest Releases';
+        document.getElementById('sportsTraySection').style.display = 'block';
+        document.getElementById('top10TraySection').style.display = 'block';
+        document.getElementById('specialsTraySection').style.display = 'block';
+
+        renderTray('latestReleasesRow', catalog.filter((m) => m.row === 'latest-releases' || m.category === 'Movies'));
+        renderTray('liveSportsRow', catalog.filter((m) => m.row === 'live-sports'));
+        renderTray('top10Row', catalog.filter((m) => m.row === 'top-10'), true);
+        renderTray('specialsRow', catalog.filter((m) => m.row === 'hotstar-specials'));
+      } else {
+        document.getElementById('mainCatalogHeading').textContent = search
+          ? `Search Results for "${search}" (${catalog.length})`
+          : `${category} on JioHotstar`;
+        document.getElementById('sportsTraySection').style.display = 'none';
+        document.getElementById('top10TraySection').style.display = 'none';
+        document.getElementById('specialsTraySection').style.display = 'none';
+        renderTray('latestReleasesRow', catalog);
+      }
+
+      renderWatchlistViews();
+    }
+
+    function setHeroBanner(movie) {
+      if (!movie) return;
+      currentHeroMovie = movie;
+      document.getElementById('heroBackdrop').src = movie.backdrop;
+      document.getElementById('heroTitle').textContent = movie.title;
+      document.getElementById('heroYear').textContent = movie.year;
+      document.getElementById('heroDuration').textContent = movie.duration;
+      document.getElementById('heroLanguage').textContent = movie.language;
+      document.getElementById('heroRating').textContent = movie.rating;
+      document.getElementById('heroDesc').textContent = movie.description;
+
+      const badgeEl = document.getElementById('heroBadge');
+      badgeEl.textContent = movie.badge || movie.category;
+      badgeEl.className = movie.badge === 'LIVE' ? 'jhs-badge-live' : 'jhs-badge-special';
+
+      updateHeroWatchlistButton();
+      renderHeroThumbs();
+    }
+
+    function updateHeroWatchlistButton() {
+      if (!currentHeroMovie) return;
+      const inList = userWatchlistIds.includes(currentHeroMovie.id);
+      const btn = document.getElementById('heroWatchlistBtn');
+      const icon = document.getElementById('heroWatchlistIcon');
+      const text = document.getElementById('heroWatchlistText');
+
+      if (inList) {
+        btn.classList.add('in-watchlist');
+        icon.className = 'soul-icon icon-check';
+        text.textContent = 'In Watchlist';
+      } else {
+        btn.classList.remove('in-watchlist');
+        icon.className = 'soul-icon icon-add';
+        text.textContent = 'Watchlist';
+      }
+    }
+
+    function renderHeroThumbs() {
+      const container = document.getElementById('heroThumbs');
+      container.innerHTML = heroSlides
+        .map(
+          (m) => `
+          <div class="jhs-hero-thumb ${currentHeroMovie && currentHeroMovie.id === m.id ? 'active' : ''}" onclick='setHeroBanner(${JSON.stringify(m).replace(/'/g, "&apos;")})'>
+            <img src="${m.poster}" alt="${m.title}" />
+          </div>
+        `
+        )
+        .join('');
+    }
+
+    function createMovieCardHTML(movie, showRank = false) {
+      const inList = userWatchlistIds.includes(movie.id);
+      return `
+        <div class="jhs-card" onclick="openPlayerModal('${movie.id}')">
+          <img src="${movie.poster}" alt="${movie.title}" loading="lazy" />
+          <span class="jhs-card-badge ${movie.badge === 'LIVE' ? 'live' : ''}">${movie.badge || movie.category}</span>
+          ${showRank && movie.rank ? `<span class="jhs-card-rank">${movie.rank}</span>` : ''}
+          <div class="jhs-card-overlay">
+            <div class="jhs-card-title">${movie.title}</div>
+            <div class="jhs-card-meta">${movie.year} • ${movie.rating} • ${movie.duration}</div>
+            <div class="jhs-card-btns">
+              <button class="btn-card-watch" onclick="event.stopPropagation(); openPlayerModal('${movie.id}')">
+                <i class="soul-icon icon-play-fill"></i> Watch Now
+              </button>
+              <button class="btn-card-watchlist ${inList ? 'saved' : ''}" onclick="event.stopPropagation(); toggleWatchlist('${movie.id}')" title="${inList ? 'Remove from Watchlist' : 'Add to Watchlist'}">
+                <i class="soul-icon ${inList ? 'icon-check' : 'icon-add'}"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderTray(elementId, movies, showRank = false) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      if (!movies || movies.length === 0) {
+        el.innerHTML = `<p style="color: #8f98b2; font-size: 14px;">No titles found matching your filter.</p>`;
+        return;
+      }
+      el.innerHTML = movies.map((m) => createMovieCardHTML(m, showRank)).join('');
+    }
+
+    function renderWatchlistViews() {
+      const watchlistTray = document.getElementById('watchlistTray');
+      const watchlistRow = document.getElementById('watchlistRow');
+      const mySpaceGrid = document.getElementById('mySpaceWatchlistGrid');
+      const countBadge = document.getElementById('watchlistCountBadge');
+
+      const savedMovies = catalog.filter((m) => userWatchlistIds.includes(m.id));
+      if (countBadge) countBadge.textContent = `(${savedMovies.length} saved in Firestore)`;
+
+      if (savedMovies.length > 0) {
+        watchlistTray.style.display = 'block';
+        watchlistRow.innerHTML = savedMovies.map((m) => createMovieCardHTML(m)).join('');
+      } else {
+        watchlistTray.style.display = 'none';
+      }
+
+      if (mySpaceGrid) {
+        if (savedMovies.length === 0) {
+          mySpaceGrid.innerHTML = `<p style="color:#8f98b2; font-size:14px;">Your watchlist is empty. Click the <strong>+</strong> button on any movie or match to save it to Firestore!</p>`;
+        } else {
+          mySpaceGrid.innerHTML = savedMovies.map((m) => createMovieCardHTML(m)).join('');
+        }
+      }
+      updateHeroWatchlistButton();
+    }
+
+    // 3. Toggle Watchlist in Firestore Backend
+    async function toggleWatchlist(movieId) {
+      const token = getAuthToken();
+      if (!token) {
+        showToast('Please Log In or Sign Up to save to your Watchlist!');
+        setTimeout(() => (window.location.href = '/login.html'), 1100);
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/watchlist/toggle', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({ movieId })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          userWatchlistIds = data.watchlistIds || [];
+          showToast(data.message);
+          loadCatalog();
+        } else {
+          showToast(data.error || 'Could not update watchlist');
+        }
+      } catch (err) {
+        showToast('Network error updating watchlist');
+      }
+    }
+
+    // 4. Community Reviews CRUD (Firestore `reviews` collection)
+    async function loadReviews() {
+      try {
+        const res = await fetch('/api/reviews');
+        const data = await res.json();
+        const container = document.getElementById('reviewsContainer');
+        const reviews = data.reviews || [];
+
+        if (reviews.length === 0) {
+          container.innerHTML = `<p style="color:#8f98b2; font-size:13px;">No fan reviews yet. Be the first to post a review!</p>`;
+          return;
+        }
+
+        container.innerHTML = reviews
+          .map(
+            (r) => `
+            <div style="background: rgba(15, 16, 20, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; gap: 10px;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+                  <span style="font-size: 12px; font-weight: 700; color: #1492ff;">${r.movieTitle}</span>
+                  <span style="color: #ffcc4d; font-size: 13px;">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</span>
+                </div>
+                <p style="font-size: 14px; color: #e2e8f0; line-height: 1.45;">"${r.comment}"</p>
+              </div>
+              <div style="display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: #6c748c; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 8px;">
+                <span>By ${r.userName}</span>
+                ${
+                  currentUser && currentUser.email === r.userEmail
+                    ? `<button onclick="deleteReview('${r.id}')" style="background:none; border:none; color:#ff6b6b; cursor:pointer; font-weight:600;">Delete</button>`
+                    : ''
+                }
+              </div>
+            </div>
+          `
+          )
+          .join('');
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function submitReview(e) {
+      e.preventDefault();
+      const token = getAuthToken();
+      if (!token) {
+        showToast('Please Log In to post a review!');
+        setTimeout(() => (window.location.href = '/login.html'), 1000);
+        return;
+      }
+
+      const select = document.getElementById('reviewMovieSelect');
+      const movieId = select.value;
+      const movieTitle = select.options[select.selectedIndex]?.text || 'JioHotstar Title';
+      const rating = document.getElementById('reviewRating').value;
+      const comment = document.getElementById('reviewComment').value;
+
+      const res = await fetch('/api/reviews', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ movieId, movieTitle, rating, comment })
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        document.getElementById('reviewComment').value = '';
+        showToast('Review saved to Firestore!');
+        loadReviews();
+      } else {
+        showToast(data.error || 'Failed to post review');
+      }
+    }
+
+    async function deleteReview(reviewId) {
+      const token = getAuthToken();
+      const res = await fetch(`/api/reviews/${reviewId}`, {
+        method: 'DELETE',
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      if (res.ok) {
+        showToast('Review deleted from Firestore');
+        loadReviews();
+      }
+    }
+
+    // 5. Update Profile in Firestore
+    async function updateProfile(e) {
+      e.preventDefault();
+      const token = getAuthToken();
+      if (!token) {
+        showToast('Please Log In first!');
+        return;
+      }
+
+      const name = document.getElementById('editProfileName').value;
+      const phone = document.getElementById('editProfilePhone').value;
+      const plan = document.getElementById('editProfilePlan').value;
+
+      const res = await fetch('/api/auth/profile', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ name, phone, plan })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        currentUser = data.user;
+        renderAuthUI(currentUser);
+        showToast('Profile updated in Firestore!');
+      } else {
+        showToast(data.error || 'Could not update profile');
+      }
+    }
+
+    // 6. Navigation & Player Modal Helpers
+    function filterCategory(category, navId) {
+      switchView('home');
+      document.querySelectorAll('.jhs-nav-item').forEach((b) => b.classList.remove('active'));
+      if (navId) document.getElementById(navId)?.classList.add('active');
+      loadCatalog(category);
+    }
+
+    function switchView(view) {
+      document.querySelectorAll('.jhs-nav-item').forEach((b) => b.classList.remove('active'));
+      if (view === 'myspace') {
+        document.getElementById('homeView').style.display = 'none';
+        document.getElementById('mySpaceView').style.display = 'block';
+        document.getElementById('nav-myspace')?.classList.add('active');
+        renderWatchlistViews();
+      } else {
+        document.getElementById('mySpaceView').style.display = 'none';
+        document.getElementById('homeView').style.display = 'block';
+        document.getElementById('nav-home')?.classList.add('active');
+      }
+    }
+
+    function toggleSearchBar() {
+      switchView('home');
+      const sec = document.getElementById('searchSection');
+      const isHidden = sec.style.display === 'none';
+      sec.style.display = isHidden ? 'block' : 'none';
+      if (isHidden) document.getElementById('searchInput').focus();
+    }
+
+    function handleSearch(query) {
+      loadCatalog('All', query);
+    }
+
+    function openPlayerModal(movieId) {
+      const movie = catalog.find((m) => m.id === movieId) || currentHeroMovie;
+      if (!movie) return;
+      document.getElementById('modalTitle').textContent = movie.title;
+      document.getElementById('modalBadge').textContent = movie.badge || movie.category;
+      document.getElementById('modalDescription').textContent = movie.description;
+      const video = document.getElementById('modalVideoPlayer');
+      video.src = movie.videoPreview || 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4';
+      const wlBtn = document.getElementById('modalWatchlistBtn');
+      const inList = userWatchlistIds.includes(movie.id);
+      wlBtn.textContent = inList ? '✓ In Watchlist' : '+ Add to Watchlist';
+      wlBtn.onclick = () => {
+        toggleWatchlist(movie.id);
+        closePlayerModal();
+      };
+      document.getElementById('playerModal').classList.add('open');
+      video.play().catch(() => {});
+    }
+
+    function closePlayerModal() {
+      const video = document.getElementById('modalVideoPlayer');
+      video.pause();
+      document.getElementById('playerModal').classList.remove('open');
+    }
+
+    initApp();
+  </script>
+</body>
+</html>

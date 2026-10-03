@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="0 0 120 120" style="white-space: pre;"
+>
+    <defs>
+      <clipPath id="__lottie_element_5">
+        <rect width="120" height="120" x="0" y="0" />
+      </clipPath>
+      <linearGradient
+        id="__lottie_element_9"
+        spreadMethod="pad"
+        gradientUnits="userSpaceOnUse"
+        x1="-121.3614"
+        y1="-128.1993"
+        x2="-49.69722"
+        y2="-52.83086"
+      >
+        <stop offset="0%" stop-color="rgb(112,122,148)" stop-opacity="0" />
+        <stop offset="25%" stop-color="rgb(104,114,140)" stop-opacity="0.5" />
+        <stop offset="50%" stop-color="rgb(95,106,133)" stop-opacity="1" />
+        <stop offset="75%" stop-color="rgb(104,114,140)" stop-opacity="0.5" />
+        <stop offset="100%" stop-color="rgb(112,122,148)" stop-opacity="0" />
+        <animate
+          attributeName="x1"
+          from="-121.3614"
+          to="47.198001"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="y1"
+          from="-128.1993"
+          to="46.971000"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="x2"
+          from="-49.69722"
+          to="132.43499"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="y2"
+          from="-52.83086"
+          to="26.235000"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </linearGradient>
+      <linearGradient id="__lottie_element_13" spreadMethod="pad" gradientUnits="userSpaceOnUse">
+        <stop offset="0%" stop-color="rgb(225,230,240)" />
+        <stop offset="50%" stop-color="rgb(200,208,224)" />
+        <stop offset="100%" stop-color="rgb(176,186,209)" />
+      </linearGradient>
+      <clipPath id="__lottie_element_15">
+        <path d="M0,0 L48,0 L48,48 L0,48z" />
+      </clipPath>
+      <linearGradient
+        id="__lottie_element_31"
+        spreadMethod="pad"
+        gradientUnits="userSpaceOnUse"
+        x1="38.7237586"
+        y1="38.61475753"
+        x2="114.9111099"
+        y2="111.02571105"
+      >
+        <stop offset="0%" stop-color="rgb(143,152,178)" />
+        <stop offset="18%" stop-color="rgb(143,152,178)" />
+        <stop offset="50%" stop-color="rgb(143,152,178)" />
+        <stop offset="80%" stop-color="rgb(143,152,178)" />
+        <stop offset="100%" stop-color="rgb(143,152,178)" />
+        <animate
+          attributeName="x1"
+          from="38.7237586"
+          to="-118.641998"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="y1"
+          from="38.61475753"
+          to="-112.946998"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="x2"
+          from="114.9111099"
+          to="-42.509998"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+        <animate
+          attributeName="y2"
+          from="111.02571105"
+          to="-42.055999"
+          dur="2s"
+          repeatCount="indefinite"
+        />
+      </linearGradient>
+      <mask id="__lottie_element_33">
+        <path
+          fill="url(#__lottie_element_32)"
+          d=" M0,-43.20000076293945 C23.84208106994629,-43.20000076293945 43.20000076293945,-23.84208106994629 43.20000076293945,0 C43.20000076293945,23.84208106994629 23.84208106994629,43.20000076293945 0,43.20000076293945 C-23.84208106994629,43.20000076293945 -43.20000076293945,23.84208106994629 -43.20000076293945,0 C-43.20000076293945,-23.84208106994629 -23.84208106994629,-43.20000076293945 0,-43.20000076293945z"
+        />
+      </mask>
+      <linearGradient
+        id="__lottie_element_32"
+        spreadMethod="pad"
+        gradientUnits="userSpaceOnUse"
+        x1="180"
+        y1="180"
+        x2="100"
+        y2="100"
+      >
+        <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0" />
+        <stop stop-color="rgb(255,255,255)" offset="22%" stop-opacity="0.5" />
+        <stop stop-color="rgb(255,255,255)" offset="49%" stop-opacity="1" />
+        <stop stop-color="rgb(255,255,255)" offset="75%" stop-opacity="0.5" />
+        <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="0" />
+
+        <animate attributeName="x1" from="180" to="-60" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="y1" from="180" to="-60" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="x2" from="60" to="-180" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="y2" from="60" to="-180" dur="2s" repeatCount="indefinite" />
+      </linearGradient>
+    </defs>
+    <g clip-path="url(#__lottie_element_5)">
+      <g
+        transform="matrix(1,0,0,1,60.066001892089844,59.909000396728516)"
+        opacity="1"
+        style="display: block;"
+      >
+        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+          <path
+            fill="rgb(255,255,255)"
+            fill-opacity="1"
+            d=" M0,-43.20000076293945 C23.84208106994629,-43.20000076293945 43.20000076293945,-23.84208106994629 43.20000076293945,0 C43.20000076293945,23.84208106994629 23.84208106994629,43.20000076293945 0,43.20000076293945 C-23.84208106994629,43.20000076293945 -43.20000076293945,23.84208106994629 -43.20000076293945,0 C-43.20000076293945,-23.84208106994629 -23.84208106994629,-43.20000076293945 0,-43.20000076293945z"
+          />
+        </g>
+      </g>
+      <g
+        transform="matrix(1,0,0,1,45.066001892089844,59.909000396728516)"
+        opacity="1"
+        style="display: block;"
+      >
+        <g opacity="1" transform="matrix(1,0,0,1,14.413000106811523,0)">
+          <path
+            fill="url(#__lottie_element_31)"
+            mask="url(#__lottie_element_33)"
+            fill-opacity="1"
+            d="M0 0 M0,-43.20000076293945 C23.84208106994629,-43.20000076293945 43.20000076293945,-23.84208106994629 43.20000076293945,0 C43.20000076293945,23.84208106994629 23.84208106994629,43.20000076293945 0,43.20000076293945 C-23.84208106994629,43.20000076293945 -43.20000076293945,23.84208106994629 -43.20000076293945,0 C-43.20000076293945,-23.84208106994629 -23.84208106994629,-43.20000076293945 0,-43.20000076293945z"
+          />
+        </g>
+      </g>
+      <g
+        clip-path="url(#__lottie_element_15)"
+        transform="matrix(0.9800000190734863,0,0,0.9800000190734863,36.97999954223633,36.388999938964844)"
+        opacity="1"
+        style="display: block;"
+      >
+        <g
+          transform="matrix(1.149999976158142,0,0,1.149999976158142,24,24)"
+          opacity="1"
+          style="display: block;"
+        >
+          <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+            <path
+              fill="rgb(15,16,19)"
+              fill-opacity="1"
+              d=" M-13.5,-6 C-13.5,-6.828000068664551 -14.17199993133545,-7.5 -15,-7.5 C-15.82800006866455,-7.5 -16.5,-6.828000068664551 -16.5,-6 C-16.5,-6 -16.5,-3 -16.5,-3 C-16.5,5.60699987411499 -9.90999984741211,12.675000190734863 -1.5,13.432999610900879 C-1.5,13.432999610900879 -1.5,18 -1.5,18 C-1.5,18.827999114990234 -0.828000009059906,19.5 0,19.5 C0.828000009059906,19.5 1.5,18.827999114990234 1.5,18 C1.5,18 1.5,13.432999610900879 1.5,13.432999610900879 C9.90999984741211,12.675000190734863 16.5,5.60699987411499 16.5,-3 C16.5,-3 16.5,-6 16.5,-6 C16.5,-6.828000068664551 15.82800006866455,-7.5 15,-7.5 C14.17199993133545,-7.5 13.5,-6.828000068664551 13.5,-6 C13.5,-6 13.5,-3 13.5,-3 C13.5,4.455999851226807 7.455999851226807,10.5 0,10.5 C-7.455999851226807,10.5 -13.5,4.455999851226807 -13.5,-3 C-13.5,-3 -13.5,-6 -13.5,-6z"
+            />
+          </g>
+        </g>
+        <g
+          transform="matrix(1.149999976158142,0,0,1.149999976158142,24,24)"
+          opacity="1"
+          style="display: block;"
+        >
+          <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+            <path
+              fill="rgb(15,16,19)"
+              fill-opacity="1"
+              d=" M-9,-10.5 C-9,-15.470999717712402 -4.9710001945495605,-19.5 0,-19.5 C4.9710001945495605,-19.5 9,-15.470999717712402 9,-10.5 C9,-10.5 9,-3 9,-3 C9,1.9709999561309814 4.9710001945495605,6 0,6 C-4.9710001945495605,6 -9,1.9709999561309814 -9,-3 C-9,-3 -9,-10.5 -9,-10.5z"
+            />
+          </g>
+        </g>
+      </g>
+      <g
+        transform="matrix(1.0199999809265137,0,0,1.0199999809265137,60.06700134277344,59.909000396728516)"
+        opacity="1"
+      >
+        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+          <path
+            stroke="url(#__lottie_element_13)"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            fill-opacity="0"
+            stroke-miterlimit="4"
+            stroke-opacity="1"
+            stroke-width="4"
+            d=" M0,-48 C26.491199493408203,-48 48,-26.491199493408203 48,0 C48,26.491199493408203 26.491199493408203,48 0,48 C-26.491199493408203,48 -48,26.491199493408203 -48,0 C-48,-26.491199493408203 -26.491199493408203,-48 0,-48z"
+          />
+        </g>
+      </g>
+      <g
+        transform="matrix(1.0199999809265137,0,0,1.0199999809265137,60.06700134277344,59.909000396728516)"
+      >
+        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+          <path
+            stroke="url(#__lottie_element_9)"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            fill-opacity="0"
+            stroke-miterlimit="4"
+            stroke-opacity="1"
+            stroke-width="4"
+            d=" M0,-48 C26.510000228881836,-48 48,-26.510000228881836 48,0 C48,26.510000228881836 26.510000228881836,48 0,48 C-26.510000228881836,48 -48,26.510000228881836 -48,0 C-48,-26.510000228881836 -26.510000228881836,-48 0,-48z"
+          />
+        </g>
+      </g>
+    </g>
+</svg>

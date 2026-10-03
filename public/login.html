@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Log In | JioHotstar - My Space</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico" />
+  <link rel="stylesheet" href="/assets/jiohotstar.css" />
+</head>
+<body class="default">
+
+  <div class="jhs-auth-page">
+    <!-- Top Header -->
+    <header class="jhs-auth-header">
+      <a href="/" class="jhs-brand-mark" style="gap: 12px;">
+        <div class="jhs-brand-icon">
+          <svg viewBox="0 0 900 666" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M501.408 221.7L800.132 6.98259C806.493 2.4106 814.032 10.8873 808.75 16.6714L553.496 296.161C550.013 299.975 550.81 306.008 555.165 308.786L711.99 412.664C717.904 416.581 714.191 425.79 707.215 424.51L503.884 387.223C500.637 386.627 497.425 388.424 496.233 391.502L393.603 656.51C390.902 663.533 380.455 661.436 380.674 653.914L387.855 407.305C387.99 402.677 383.605 399.242 379.144 400.481L209.721 447.532C202.699 449.483 198.256 440.193 204.182 435.951L334.919 342.368C339.228 339.284 338.575 332.691 333.745 330.512L93.2881 222.037C86.2847 218.877 89.5596 208.32 97.1216 209.679L343.631 253.979C348.917 254.929 352.797 249.122 349.896 244.602L294.127 152.304C290.572 146.763 296.914 140.21 302.568 143.582L405.461 210.882C409.332 213.414 414.549 211.477 415.829 207.032L463.117 42.8773C465.27 35.3707 476.232 36.4706 476.85 44.2552L490.543 216.662C490.967 222 497.061 224.825 501.408 221.7Z" fill="white"/>
+          </svg>
+        </div>
+        <span style="font-size: 21px; font-weight: 700; letter-spacing: -0.4px; background: linear-gradient(90deg, #fff, #ccebff, #ff8fbf); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+          JioHotstar
+        </span>
+      </a>
+
+      <a href="/" class="btn-jhs-secondary" style="padding: 8px 18px; font-size: 13px; text-decoration: none;">
+        <i class="soul-icon icon-arrow-back"></i> Back to Home
+      </a>
+    </header>
+
+    <!-- Center Onboarding Log In Card -->
+    <div class="jhs-auth-card-wrap">
+      <div class="jhs-auth-card">
+        <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #1492ff; background: rgba(20, 146, 255, 0.14); border: 1px solid rgba(20, 146, 255, 0.35); padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;">
+          <i class="soul-icon icon-user-fill"></i> <span>My Space Login</span>
+        </div>
+
+        <h1 class="jhs-auth-title">Log in to continue</h1>
+        <p class="jhs-auth-subtitle">
+          Enter your registered email and password to access your saved Watchlist, 4K streams, and profile settings.
+        </p>
+
+        <div id="loginAlert" class="jhs-alert"></div>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              class="jhs-input"
+              placeholder="Enter your email address"
+              required
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="jhs-form-group">
+            <label class="jhs-label" for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              class="jhs-input"
+              placeholder="Enter your password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+
+          <button type="submit" id="loginBtn" class="btn-jhs-primary" style="width: 100%; margin-top: 10px; padding: 14px;">
+            <span>Log In to JioHotstar</span>
+            <i class="soul-icon icon-caret-forward"></i>
+          </button>
+        </form>
+
+        <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; font-size: 14px; color: #8f98b2;">
+          New to JioHotstar?
+          <a href="/signup.html" style="color: #1492ff; font-weight: 600; text-decoration: none; margin-left: 4px;">
+            Sign Up now
+          </a>
+        </div>
+
+        <p style="margin-top: 16px; text-align: center; font-size: 11px; color: #6c748c;">
+          Having trouble logging in? <a href="/signup.html" style="color: #8f98b2; text-decoration: underline;">Get Help</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 18px; font-size: 12px; color: #6c748c;">
+      © 2026 STAR India / JioHotstar Clone • Node.js + Express + Firebase Firestore + bcryptjs
+    </footer>
+  </div>
+
+  <script>
+    async function handleLogin(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('loginAlert');
+      const loginBtn = document.getElementById('loginBtn');
+
+      alertBox.className = 'jhs-alert';
+      alertBox.style.display = 'none';
+      loginBtn.disabled = true;
+      loginBtn.innerHTML = '<span>Verifying with Firestore...</span>';
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          alertBox.textContent = data.error || 'Invalid login credentials.';
+          alertBox.className = 'jhs-alert error';
+          loginBtn.disabled = false;
+          loginBtn.innerHTML = '<span>Log In to JioHotstar</span><i class="soul-icon icon-caret-forward"></i>';
+          return;
+        }
+
+        // Save JWT token
+        localStorage.setItem('jhs_token', data.token);
+
+        alertBox.textContent = `Welcome back, ${data.user.name}! Redirecting to Home...`;
+        alertBox.className = 'jhs-alert success';
+
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 800);
+      } catch (err) {
+        alertBox.textContent = 'Network error. Please make sure the server is running.';
+        alertBox.className = 'jhs-alert error';
+        loginBtn.disabled = false;
+        loginBtn.innerHTML = '<span>Log In to JioHotstar</span><i class="soul-icon icon-caret-forward"></i>';
+      }
+    }
+  </script>
+</body>
+</html>

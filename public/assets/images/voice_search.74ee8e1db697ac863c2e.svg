@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Keyshape -->
+<svg xmlns="http://www.w3.org/2000/svg" id="option-4" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" viewBox="40 40 120 120" style="white-space: pre;">
+    <defs>
+        <radialGradient id="Gradient-0" cx="0" cy="-33.903" r="67.782" fx="0" fy="-33.903" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#e1e6f0"/>
+            <stop offset="0.5" stop-color="#c8d0e0"/>
+            <stop offset="1" stop-color="#b0bad1"/>
+        </radialGradient>
+        <linearGradient id="Gradient-1" x1="-0.385" y1="-33.361" x2="-0.894" y2="34.722" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#e1e6f0"/>
+            <stop offset="0.5" stop-color="#c8d0e0"/>
+            <stop offset="1" stop-color="#b0bad1"/>
+        </linearGradient>
+        <linearGradient id="Gradient-2" x1="-0.288" y1="-34.771" x2="0.639" y2="33.814" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#e1e6f0"/>
+            <stop offset="0.5" stop-color="#c8d0e0"/>
+            <stop offset="1" stop-color="#b0bad1"/>
+        </linearGradient>
+    </defs>
+    <style>
+@keyframes Shape-Layer-10_t { 0% { transform: translate(100.175px,100.656px) scale(1.57,1.57) translate(724.325px,429.344px); } 33.7188% { transform: translate(100.175px,100.656px) scale(1.57,1.57) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 44.5608% { transform: translate(100.175px,100.656px) scale(1.2,1.2) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.86,0,0.833,1); } 55.4029% { transform: translate(100.175px,100.656px) scale(1.36,1.36) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 62.631% { transform: translate(100.175px,100.656px) scale(1.2,1.2) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.86,0,0.833,1); } 69.859% { transform: translate(100.175px,100.656px) scale(1.57,1.57) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 80.7011% { transform: translate(100.175px,100.656px) scale(1.2,1.2) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.86,0,0.833,1); } 91.5431% { transform: translate(100.175px,100.656px) scale(1.36,1.36) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 98.7712% { transform: translate(100.175px,100.656px) scale(1.2,1.2) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.358828,0,0.691405,0.349878); } 100% { transform: translate(100.175px,100.656px) scale(1.205321,1.205321) translate(724.325px,429.344px); } }
+@keyframes Shape-Layer-10_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 33.7188% { visibility: visible; animation-timing-function: steps(1); } 98.7712% { visibility: hidden; animation-timing-function: steps(1); } 100% { visibility: hidden; animation-timing-function: steps(1); } }
+@keyframes Shape-Layer-16_t { 0% { transform: translate(100.175px,100.656px) scale(1.02,1.02) translate(724.325px,429.344px); } 26.4907% { transform: translate(100.175px,100.656px) scale(1.02,1.02) translate(724.325px,429.344px); animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 33.7188% { transform: translate(100.175px,100.656px) scale(1.57,1.57) translate(724.325px,429.344px); } 100% { transform: translate(100.175px,100.656px) scale(1.57,1.57) translate(724.325px,429.344px); } }
+@keyframes Shape-Layer-16_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 26.4908% { visibility: visible; animation-timing-function: steps(1); } 33.7188% { visibility: hidden; animation-timing-function: steps(1); } 100% { visibility: hidden; animation-timing-function: steps(1); } }
+@keyframes Ellipse-1-2_o { 0% { opacity: 0; } 26.4908% { opacity: 0; animation-timing-function: cubic-bezier(0.167,0.167,0.667,1); } 33.7188% { opacity: 0.2; } 100% { opacity: 0.2; } }
+@keyframes Shape-Layer-18_v { 0% { visibility: visible; animation-timing-function: steps(1); } 68.6664% { visibility: hidden; animation-timing-function: steps(1); } 100% { visibility: hidden; animation-timing-function: steps(1); } }
+@keyframes Ellipse-1-3_t { 0% { transform: translate(-724.325px,-429.344px) scale(1.15,1.15); } 26.4907% { transform: translate(-724.325px,-429.344px) scale(1.15,1.15); animation-timing-function: cubic-bezier(0.189,0.273,0.652,0.498); } 55.8366% { transform: translate(-724.325px,-429.344px) scale(1.49371,1.49371); animation-timing-function: cubic-bezier(0.604,0.83,0.693,0.955); } 68.1243% { transform: translate(-724.325px,-429.344px) scale(1.64513,1.64513); } 100% { transform: translate(-724.325px,-429.344px) scale(1.64513,1.64513); } }
+@keyframes Ellipse-1-3_o { 0% { opacity: 1; } 26.4908% { opacity: 1; animation-timing-function: cubic-bezier(0.167,0,0.833,1); } 49.0423% { opacity: 0.5; animation-timing-function: cubic-bezier(0.333,0,0.833,0.833); } 69.8591% { opacity: 0; } 100% { opacity: 0; } }
+@keyframes Path-1_sw { 0% { stroke-width: 2px; } 46.657% { stroke-width: 2px; animation-timing-function: cubic-bezier(0.333,0,0.833,0.833); } 68.1243% { stroke-width: 0px; } 100% { stroke-width: 0px; } }
+@keyframes Shape-Layer-12_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 57.8244% { visibility: visible; animation-timing-function: steps(1); } 98.7712% { visibility: hidden; animation-timing-function: steps(1); } 100% { visibility: hidden; animation-timing-function: steps(1); } }
+@keyframes Ellipse-1-4_t { 0% { transform: translate(-724.325px,-429.344px) scale(1,1); } 57.8243% { transform: translate(-724.325px,-429.344px) scale(1,1); animation-timing-function: cubic-bezier(0.189,0.19,0.652,0.651); } 87.134% { transform: translate(-724.325px,-429.344px) scale(1.49371,1.49371); animation-timing-function: cubic-bezier(0.604,0.83,0.693,0.955); } 99.4578% { transform: translate(-724.325px,-429.344px) scale(1.64513,1.64513); } 100% { transform: translate(-724.325px,-429.344px) scale(1.64513,1.64513); } }
+@keyframes Ellipse-1-4_o { 0% { opacity: 1; } 85.5439% { opacity: 1; animation-timing-function: cubic-bezier(0.315932,0,0.770728,0.702825); } 100% { opacity: 0.0895798; } }
+@keyframes Path-1-2_sw { 0% { stroke-width: 2px; } 77.9545% { stroke-width: 2px; animation-timing-function: cubic-bezier(0.333,0,0.833,0.833); } 99.4579% { stroke-width: 0px; } 100% { stroke-width: 0px; } }
+@keyframes Shape-Layer-13_v { 0% { visibility: hidden; animation-timing-function: steps(1); } 89.1579% { visibility: visible; animation-timing-function: steps(1); } 100% { visibility: hidden; animation-timing-function: steps(1); } }
+@keyframes Ellipse-1-5_t { 0% { transform: translate(-724.325px,-429.344px) scale(1,1); } 89.1579% { transform: translate(-724.325px,-429.344px) scale(1,1); animation-timing-function: cubic-bezier(0.221531,0.219102,0.584229,0.582919); } 100% { transform: translate(-724.325px,-429.344px) scale(1.185213,1.185213); } }
+@keyframes Ellipse-1-5_o { 0% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes Path-1-3_sw { 0% { stroke-width: 2px; } 100% { stroke-width: 2px; } }
+    </style>
+    <g id="Shape-Layer-10" visibility="hidden" transform="translate(100.175,100.656) scale(1.57,1.57) translate(724.325,429.344)" style="animation: 2.767s linear infinite both Shape-Layer-10_t, 2.767s linear infinite forwards Shape-Layer-10_v;">
+        <g id="Ellipse-1" opacity="0.2" transform="translate(-724.325,-429.344)">
+            <path id="Ellipse-Path-1" fill="#fafbff" d="M0,-34.6675C19.1463,-34.6675,34.6675,-19.1463,34.6675,0C34.6675,19.1463,19.1463,34.6675,0,34.6675C-19.1463,34.6675,-34.6675,19.1463,-34.6675,0C-34.6675,-19.1463,-19.1463,-34.6675,0,-34.6675Z" fill-opacity="1" fill-rule="nonzero"/>
+        </g>
+    </g>
+    <g id="Shape-Layer-16" visibility="hidden" transform="translate(100.175,100.656) scale(1.02,1.02) translate(724.325,429.344)" style="animation: 2.767s linear infinite both Shape-Layer-16_t, 2.767s linear infinite forwards Shape-Layer-16_v;">
+        <g id="Ellipse-1-2" opacity="0" transform="translate(-724.325,-429.344)" style="animation: 2.767s linear infinite both Ellipse-1-2_o;">
+            <path id="Ellipse-Path-1-2" fill="#fafbff" d="M0,-34.6675C19.1463,-34.6675,34.6675,-19.1463,34.6675,0C34.6675,19.1463,19.1463,34.6675,0,34.6675C-19.1463,34.6675,-34.6675,19.1463,-34.6675,0C-34.6675,-19.1463,-19.1463,-34.6675,0,-34.6675Z" fill-opacity="1" fill-rule="nonzero"/>
+        </g>
+    </g>
+    <g id="Shape-Layer-18" visibility="visible" transform="translate(100.175,100.656) translate(724.325,429.344)" style="animation: 2.767s linear infinite forwards Shape-Layer-18_v;">
+        <g id="Ellipse-1-3" opacity="1" transform="translate(-724.325,-429.344) scale(1.15,1.15)" style="animation: 2.767s linear infinite both Ellipse-1-3_t, 2.767s linear infinite both Ellipse-1-3_o;">
+            <path id="Path-1" fill="none" d="M0,-34.667C19.146,-34.667,34.667,-19.146,34.667,0C34.667,19.146,19.146,34.667,0,34.667C-19.146,34.667,-34.667,19.146,-34.667,0C-34.667,-19.146,-19.146,-34.667,0,-34.667Z" stroke="url(#Gradient-0)" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" style="animation: 2.767s linear infinite both Path-1_sw;"/>
+        </g>
+    </g>
+    <g id="Shape-Layer-12" visibility="hidden" transform="translate(100.175,100.656) translate(724.325,429.344)" style="animation: 2.767s linear infinite forwards Shape-Layer-12_v;">
+        <g id="Ellipse-1-4" opacity="1" transform="translate(-724.325,-429.344)" style="animation: 2.767s linear infinite both Ellipse-1-4_t, 2.767s linear infinite both Ellipse-1-4_o;">
+            <path id="Path-1-2" fill="none" d="M0,-34.667C19.146,-34.667,34.667,-19.146,34.667,0C34.667,19.146,19.146,34.667,0,34.667C-19.146,34.667,-34.667,19.146,-34.667,0C-34.667,-19.146,-19.146,-34.667,0,-34.667Z" stroke="url(#Gradient-1)" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" style="animation: 2.767s linear infinite both Path-1-2_sw;"/>
+        </g>
+    </g>
+    <g id="Shape-Layer-13" visibility="hidden" transform="translate(100.175,100.656) translate(724.325,429.344)" style="animation: 2.767s linear infinite forwards Shape-Layer-13_v;">
+        <g id="Ellipse-1-5" opacity="1" transform="translate(-724.325,-429.344)" style="animation: 2.767s linear infinite both Ellipse-1-5_t, 2.767s linear infinite both Ellipse-1-5_o;">
+            <path id="Path-1-3" fill="none" d="M0,-34.667C19.146,-34.667,34.667,-19.146,34.667,0C34.667,19.146,19.146,34.667,0,34.667C-19.146,34.667,-34.667,19.146,-34.667,0C-34.667,-19.146,-19.146,-34.667,0,-34.667Z" stroke="url(#Gradient-2)" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter" style="animation: 2.767s linear infinite both Path-1-3_sw;"/>
+        </g>
+    </g>
+    <g id="Shape-Layer-5" transform="translate(100.175,100.656) translate(724.325,429.344)">
+        <g id="Ellipse-1-6" opacity="1" transform="translate(-724.325,-429.344)">
+            <path id="Ellipse-Path-1-3" fill="#ffffff" d="M0,-34.6675C19.1463,-34.6675,34.6675,-19.1463,34.6675,0C34.6675,19.1463,19.1463,34.6675,0,34.6675C-19.1463,34.6675,-34.6675,19.1463,-34.6675,0C-34.6675,-19.1463,-19.1463,-34.6675,0,-34.6675Z" fill-opacity="1" fill-rule="nonzero"/>
+        </g>
+    </g>
+    <g id="Mic-iocn-4" opacity="1" transform="translate(100.125,101) translate(-21,-19)">
+        <g id="Shape-Layer-2" transform="translate(20.996,13.965) translate(748.004,434.035)">
+            <g id="Rectangle-1" opacity="1" transform="translate(-748.004,-434.035) scale(1,0.96019)">
+                <path id="Path-1-4" fill="#000000" d="M4.623,-4.878C4.66,-3.512,4.711,3.601,4.623,5.301C4.535,7.001,1.848,8.384,-0.121,8.327C-2.09,8.27,-4.531,6.855,-4.623,5.04C-4.715,3.225,-4.624,-3.834,-4.623,-4.943C-4.621,-6.701,-2.871,-8.359,0.035,-8.327C2.941,-8.295,4.586,-6.244,4.623,-4.878Z" fill-opacity="1" fill-rule="nonzero" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter"/>
+            </g>
+        </g>
+        <g id="Shape-Layer-4" transform="translate(21,30.688) translate(747.875,417.312)">
+            <g id="Shape-1" opacity="1">
+                <path id="Path-1-5" fill="none" d="M-747.875,-419.625C-747.875,-419.625,-747.875,-415,-747.875,-415" stroke="#000000" stroke-opacity="1" stroke-width="2.5" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter"/>
+            </g>
+        </g>
+        <g id="Shape-Layer-5-2" transform="translate(21,19)">
+            <g id="Shape-1-2" opacity="1">
+                <path id="Path-1-6" fill="none" d="M-9.125,-0.812C-9.125,-0.812,-9.313,9.312,-0.125,9.312C9.063,9.312,9,-0.812,9,-0.812" stroke="#000000" stroke-opacity="1" stroke-width="2.5" stroke-miterlimit="4" stroke-linecap="butt" stroke-linejoin="miter"/>
+            </g>
+        </g>
+    </g>
+</svg>
