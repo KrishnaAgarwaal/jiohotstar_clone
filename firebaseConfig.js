@@ -45,15 +45,20 @@ const withTimeout = (promise, ms = 2500) =>
     )
   ]);
 
-// Local mirror fallback (`data/firestore-db.json`)
-const dataDir = path.join(__dirname, 'data');
+// Local mirror fallback (`data/firestore-db.json` locally, `/tmp/firestore-db.json` on Vercel)
+const isServerless = Boolean(process.env.VERCEL || process.env.AWS_LAMBDA_FUNCTION_NAME);
+const dataDir = isServerless ? '/tmp' : path.join(__dirname, 'data');
 const dbFilePath = path.join(dataDir, 'firestore-db.json');
 
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir, { recursive: true });
-}
-if (!fs.existsSync(dbFilePath)) {
-  fs.writeFileSync(dbFilePath, JSON.stringify({ users: {}, reviews: {} }, null, 2), 'utf8');
+try {
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+  if (!fs.existsSync(dbFilePath)) {
+    fs.writeFileSync(dbFilePath, JSON.stringify({ users: {}, reviews: {} }, null, 2), 'utf8');
+  }
+} catch {
+  // Ignore read-only filesystem warnings in serverless environments
 }
 
 const readLocalStore = () => {
@@ -65,7 +70,11 @@ const readLocalStore = () => {
 };
 
 const writeLocalStore = (store) => {
-  fs.writeFileSync(dbFilePath, JSON.stringify(store, null, 2), 'utf8');
+  try {
+    fs.writeFileSync(dbFilePath, JSON.stringify(store, null, 2), 'utf8');
+  } catch {
+    // Ignore on read-only serverless environments (Cloud Firestore is primary)
+  }
 };
 
 // Unified Firestore Wrapper using your live `webcopy-67d86` Firestore instance

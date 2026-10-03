@@ -616,7 +616,11 @@ app.get('/signup', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'signup.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 JioHotstar Full-Stack Server running at http://localhost:${PORT}`);
-  console.log(`📦 Database Mode: ${storageMode}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`🚀 JioHotstar Full-Stack Server running at http://localhost:${PORT}`);
+    console.log(`📦 Database Mode: ${storageMode}`);
+  });
+}
+
+module.exports = app;
